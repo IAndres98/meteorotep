@@ -1,0 +1,247 @@
+/* Reset básico para quitar márgenes y paddings por defecto */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e90ff, #ff6347);
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.App {
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.App-header {
+  background-color: #4a90e2;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.App-logo {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.auth-container, .weather-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-container {
+  background-color: #f9f9f9;
+}
+
+.weather-container {
+  background-color: #f0f4f7;
+}
+
+.login-section, .register-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn.login {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.btn.register {
+  background-color: #ff6347;
+  color: white;
+}
+
+.btn.logout {
+  background-color: #ff4c4c;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.btn.toggle-auth {
+  background-color: transparent;
+  color: #4a90e2;
+  text-decoration: underline;
+  border: none;
+  margin-top: 10px;
+}
+
+.btn.search {
+  background-color: #3b5998;
+  color: white;
+  margin-left: 10px;
+}
+
+.btn.export {
+  background-color: #008080;
+  color: white;
+  margin-top: 20px;
+}
+
+.btn.location {
+  background-color: #ff6347;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.current-weather, .days-forecast {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.current-weather h2, .days-forecast h2 {
+  color: #333;
+}
+
+.current-weather p, .days-forecast p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.weather-cards {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: calc(48% - 20px); /* Ajuste para dos columnas */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #4a90e2;
+}
+
+.forecast-details h6 {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 2px 0;
+}
+
+/* Barra de navegación */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.navbar .nav-link:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+/* Estilo para el enlace "Ver terremotos" */
+.navbar .nav-link {
+  max-width: 300px; /* Ajusta este valor según tus necesidades */
+  margin: 0 auto; /* Centra el enlace horizontalmente */
+  font-size: 18px;
+}
